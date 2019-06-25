@@ -1,0 +1,12 @@
+configuration {
+
+font: "mononoki 12";
+show-icons: true;
+icon-theme: "Papirus";
+theme: "Light-Theme";
+disable-history: true;
+max-history-size: 25;
+sort: true;
+
+}
+
