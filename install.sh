@@ -1,4 +1,4 @@
-if [[ ${SHELL##/*/} != "dzsh" ]]; then
+if [[ ${SHELL##/*/} != "zsh" ]]; then
 	echo -e "\033[31m[!]\033[0m 推荐使用 zsh shell"
 	echo -e "\n\033[33m[?]\033[0m Install Zsh?? "
 	echo -e "\033[32m->\033[0m y) Install Zsh and Deployment settings"
