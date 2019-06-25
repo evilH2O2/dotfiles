@@ -7,7 +7,7 @@ if [[ ${SHELL##/*/} != "zsh" ]]; then
 	read -p "Give me your choose[y/n/N]： " download
 	# echo $download
 	case $download in
-		y ) y | pacman -S zsh | chsh -s /use/bin/zsh;;
+		y ) y | pacman -S zsh | chsh -s /usr/bin/zsh;;
 		n ) echo "跳过安装 Zsh，直接部署配置";;
 		N ) exit 0;;
 		*) echo -e "\033[31m[!]\033[0m Please input [y/n/N]"
