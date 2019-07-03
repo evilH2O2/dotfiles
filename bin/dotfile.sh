@@ -36,18 +36,18 @@ polybar(){
 	if [[ ! -d $dirScript ]]; then  
 		mkdir -p $dir
 	fi
-	ln -s $HOME/dotfiles/polybar/launch.sh               $HOME/.config/polybar/launch.sh
-	ln -s $HOME/dotfiles/polybar/modules.ini             $HOME/.config/polybar/modules.ini
-	ln -s $HOME/dotfiles/polybar/bar-backlight.ini       $HOME/.config/polybar/bar-backlight.ini
-	ln -s $HOME/dotfiles/polybar/bar-keyboard.ini        $HOME/.config/polybar/bar-keyboard.ini
-	ln -s $HOME/dotfiles/polybar/bar-workspace.ini       $HOME/.config/polybar/bar-workspace.ini
-	ln -s $HOME/dotfiles/polybar/Script/check-battery.sh $HOME/.config/polybar/Script/check-battery.sh
-	ln -s $HOME/dotfiles/polybar/Script/check-network.sh $HOME/.config/polybar/Script/check-network.sh
-	ln -s $HOME/dotfiles/polybar/Script/power.sh         $HOME/.config/polybar/Script/power.sh
-	ln -s $HOME/dotfiles/polybar/Script/update.sh        $HOME/.config/polybar/Script/update.sh
+	# ln -s $HOME/dotfiles/polybar/launch.sh               $HOME/.config/polybar/launch.sh
+	# ln -s $HOME/dotfiles/polybar/modules.ini             $HOME/.config/polybar/modules.ini
+	# ln -s $HOME/dotfiles/polybar/bar-backlight.ini       $HOME/.config/polybar/bar-backlight.ini
+	# ln -s $HOME/dotfiles/polybar/bar-keyboard.ini        $HOME/.config/polybar/bar-keyboard.ini
+	# ln -s $HOME/dotfiles/polybar/bar-workspace.ini       $HOME/.config/polybar/bar-workspace.ini
+	# ln -s $HOME/dotfiles/polybar/Script/check-battery.sh $HOME/.config/polybar/Script/check-battery.sh
+	# ln -s $HOME/dotfiles/polybar/Script/check-network.sh $HOME/.config/polybar/Script/check-network.sh
+	# ln -s $HOME/dotfiles/polybar/Script/power.sh         $HOME/.config/polybar/Script/power.sh
+	# ln -s $HOME/dotfiles/polybar/Script/update.sh        $HOME/.config/polybar/Script/update.sh
 	
-	# ln -s $HOME/dotfiles/polybar $HOME/.config/polybar
-	ln -s $HOME/dotfiles/polybar/launch.sh $HOME/.config/polybar/launch.sh
+	ln -s $HOME/dotfiles/polybar $HOME/.config/polybar
+	# ln -s $HOME/dotfiles/polybar/launch.sh $HOME/.config/polybar/launch.sh
 }
 
 # [bashrc]
@@ -81,6 +81,7 @@ ncmpcpp(){
 
 # [mpd] 
 mpd(){
+	ln -s $HOME/dotfiles/mpd/mpd.conf /etc
 	mkdir -p $HOME/.mpd/playlists
 	touch $HOME/.mpd/mpd.db
 	touch $HOME/.mpd/mpd.pid
