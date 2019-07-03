@@ -29,6 +29,9 @@ vim(){
 
 	# ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 	ln -s $HOME/dotfiles/vim/color/basepurple.vim /usr/share/vim/vim81/colors/basepurple.vim
+	echo -e "\033[33m[!]\033[0 使用　vim-plug，自动下载(~/.vim)\n"
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # [rofi]
