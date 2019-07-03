@@ -61,9 +61,10 @@ polybar(){
 # [bashrc]
 bashrc(){
 	# ln -s $HOME/dotfiles/bashrc $HOME/.bashrc
+
 	cp /etc/skel/.bashrc $HOME/.bashrc
 	sed -i '/PS1=/d' $HOME/.bashrc
-	echo -e "\033[33m[!]\033[0m $HOME/.bashrc 需要检查 PS1 是否需要注释!!!!!!!\n"
+	echo -e "\033[33m[!]\033[0m $HOME/.bashrc 需要检查 PS1 是否需要注释，以及其他配置是否出现错误!!!!!!!\n"
 	cat $HOME/dotfiles/bashrc >> $HOME/.bashrc
 }
 
@@ -104,7 +105,7 @@ mpd(){
 	echo -e "\033[33m[!]\033[0m 建议自行检查 MPD配置文件:　/etc/mpd.conf\n"
 
 	# ln -s $HOME/dotfiles/mpd/mpd.conf /etc
-	cat $HOME/dotfiles/mpd/mpd.conf /etc/mpd.conf
+	cat $HOME/dotfiles/mpd/mpd.conf > /etc/mpd.conf
 
 	mkdir -p $HOME/.mpd/playlists
 	touch $HOME/.mpd/mpd.db
