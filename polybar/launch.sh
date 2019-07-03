@@ -7,9 +7,8 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
-polybar -c ~/.config/polybar/bar-workspace.ini workspace &
-# polybar -c ~/.config/polybar/bar-right.ini right &
-polybar -c ~/.config/polybar/bar-keyboard.ini keyboard &
-polybar -c ~/.config/polybar/bar-backlight.ini backlight &
+polybar -c $HOME/dotfiles/polybar/bar-workspace.ini workspace &
+polybar -c $HOME/dotfiles/polybar/bar-keyboard.ini keyboard &
+polybar -c $HOME/dotfiles/polybar/bar-backlight.ini backlight &
 
 echo "Bars launched..."

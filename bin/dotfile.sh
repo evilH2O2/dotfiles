@@ -15,14 +15,15 @@ main(){
 
 # [VIM]
 vim(){
-	ln -s vim/vimrc $HOME/.vimrc
-	ln -s vim/color/basepurple.vim /usr/share/vim/vim81/colors/basepurple.vim
+	ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
+	ln -s $HOME/dotfiles/vim/color/basepurple.vim /usr/share/vim/vim81/colors/basepurple.vim
 }
 
 # [rofi]
 rofi(){
-	ln -s rofi/config.rasi      $HOME/.config/rofi/config.rasi
-	ln -s rofi/Light-Theme.rasi $HOME/.config/rofi/Light-Theme.rasi
+	# ln -s $HOME/dotfiles/rofi      $HOME/.config/rofi
+	ln -s $HOME/dotfiles/rofi/config.rasi      $HOME/.config/rofi/config.rasi
+	ln -s $HOME/dotfiles/rofi/Light-Theme.rasi $HOME/.config/rofi/Light-Theme.rasi
 }
 
 # [polybar]
@@ -35,42 +36,47 @@ polybar(){
 	if [[ ! -d $dirScript ]]; then  
 		mkdir -p $dir
 	fi
-	ln -s polybar/launch.sh               $HOME/.config/polybar/launch.sh
-	ln -s polybar/modules.ini             $HOME/.config/polybar/modules.ini
-	ln -s polybar/bar-backlight.ini       $HOME/.config/polybar/bar-backlight.ini
-	ln -s polybar/bar-keyboard.ini        $HOME/.config/polybar/bar-keyboard.ini
-	ln -s polybar/bar-workspace.ini       $HOME/.config/polybar/bar-workspace.ini
-	ln -s polybar/Script/check-battery.sh $HOME/.config/polybar/Script/check-battery.sh
-	ln -s polybar/Script/check-network.sh $HOME/.config/polybar/Script/check-network.sh
-	ln -s polybar/Script/power.sh         $HOME/.config/polybar/Script/power.sh
-	ln -s polybar/Script/update.sh        $HOME/.config/polybar/Script/update.sh
+	ln -s $HOME/dotfiles/polybar/launch.sh               $HOME/.config/polybar/launch.sh
+	ln -s $HOME/dotfiles/polybar/modules.ini             $HOME/.config/polybar/modules.ini
+	ln -s $HOME/dotfiles/polybar/bar-backlight.ini       $HOME/.config/polybar/bar-backlight.ini
+	ln -s $HOME/dotfiles/polybar/bar-keyboard.ini        $HOME/.config/polybar/bar-keyboard.ini
+	ln -s $HOME/dotfiles/polybar/bar-workspace.ini       $HOME/.config/polybar/bar-workspace.ini
+	ln -s $HOME/dotfiles/polybar/Script/check-battery.sh $HOME/.config/polybar/Script/check-battery.sh
+	ln -s $HOME/dotfiles/polybar/Script/check-network.sh $HOME/.config/polybar/Script/check-network.sh
+	ln -s $HOME/dotfiles/polybar/Script/power.sh         $HOME/.config/polybar/Script/power.sh
+	ln -s $HOME/dotfiles/polybar/Script/update.sh        $HOME/.config/polybar/Script/update.sh
+	
+	# ln -s $HOME/dotfiles/polybar $HOME/.config/polybar
+	ln -s $HOME/dotfiles/polybar/launch.sh $HOME/.config/polybar/launch.sh
 }
 
 # [bashrc]
 bashrc(){
-	ln -s bashrc $HOME/.bashrc
+	ln -s $HOME/dotfiles/bashrc $HOME/.bashrc
 }
 
 # [zsh]
 zsh(){
-	ln -s zsh/zshrc $HOME/.zshrc
-	ln -s zsh/zprofile $HOME/.zprofile
-	ln -s zsh/theme/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
+	ln -s $HOME/dotfiles/zsh/zshrc $HOME/.zshrc
+	ln -s $HOME/dotfiles/zsh/zprofile $HOME/.zprofile
+	ln -s $HOME/dotfiles/zsh/theme/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
 }
 
 # [conky]
 conky(){
-	ln -s conky/conky.conf $HOME/.config/conky/conky.conf
+	# ln -s $HOME/dotfiles/conky $HOME/.config/conky
+	ln -s $HOME/dotfiles/conky/conky.conf $HOME/.config/conky/conky.conf
 }
 
 # [i3wm]
-i3wm(){ 
-	ln -s i3/config $HOME/.config/i3/config
+i3wm(){
+	# ln -s $HOME/dotfiles/i3 $HOME/.config/i3
+	ln -s $HOME/dotfiles/i3/config $HOME/.config/i3/config
 }
 
 # [ncmpcpp] 
 ncmpcpp(){
-	ln -s ncmpcpp/config $HOME/.ncmpcpp/config
+	ln -s $HOME/dotfiles/ncmpcpp $HOME/.ncmpcpp
 }
 
 # [mpd] 
