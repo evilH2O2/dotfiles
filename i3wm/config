@@ -190,7 +190,7 @@ bindsym ctrl+$mod+e exec --no-startup-id caja
 bindsym --release Shift+Print exec --no-startup-id scrot -s
 bindsym --release Print exec --no-startup-id deepin-screenshot
 
-# gnome-terminal两个终端切换使用
+# gnome-terminal 和 urxvt两个终端切换使用
 bindsym $mod+t exec gnome-terminal
 
 
@@ -205,7 +205,7 @@ bindsym ctrl+Mod1+j exec "xbacklight -10"
 bindsym $mod+F9 exec "xbacklight +10"
 bindsym $mod+F8 exec "xbacklight -10"
 # 手动壁纸切换
-bindsym Mod1+w exec ~/Tools/wallpaper.sh
+bindsym Mod1+w exec $HOME/dotfiles/bin/wallpaper.sh
 
 
 # ======== background ========
