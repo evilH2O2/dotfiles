@@ -22,8 +22,11 @@ main(){
 	i3wm
 	ncmpcpp
 	# mpd
+	neofetch
 }
 ```
+
+**NOTE**: 建立的是配置**目录**的软连接，建议将所需配置程序的配置目录(就上面的几个)删个遍，可以运行　`bin/delConfigFile.sh`
 
 ---
 
