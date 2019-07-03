@@ -5,7 +5,7 @@
 # 可以把这条命令加入到 ~/.bash_profile的最后一行，就不需要每次source
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 # PS1='[\u@\h \W]\$ '
 PS1='\033[1;31m\u\033[0m\033[0;32m@\033[0m\033[1;36m\h\033[0m \033[34m\W\033[0m ->\033[0,35m\$\033[0m '
