@@ -1,3 +1,5 @@
+#!/usr/bin/sh
+
 cd ..
 # echo `pwd`
 
@@ -11,6 +13,7 @@ main(){
 	i3wm
 	ncmpcpp
 	mpd
+	neofetch
 }
 
 fileOk(){
@@ -104,7 +107,7 @@ ncmpcpp(){
 # [mpd] 
 mpd(){
 	echo -e "\033[33m[!]\033[0m MPD需要手动设置: # gpasswd -a mpd <your login group>\n"
-	echo -e "\033[33m[!]\033[0m $ chmod 710 /home/<your home dir>\n"
+	echo -e "\033[33m[!]\033[0m $ chmod 710 /home/<your home dir or music dir>\n"
 	echo -e "\033[33m[!]\033[0m 建议自行检查 MPD配置文件:　/etc/mpd.conf\n"
 
 	# ln -s $HOME/dotfiles/mpd/mpd.conf /etc
@@ -115,3 +118,10 @@ mpd(){
 	touch $HOME/.mpd/mpd.pid
 	touch $HOME/.mpd/mpdstate
 }
+
+# [neofetch]
+neofetch(){
+	fileOk "$HOME/.config/neofetch" "neofetch" "neofetch"
+}
+
+main
