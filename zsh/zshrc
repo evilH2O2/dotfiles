@@ -101,7 +101,8 @@ alias pandoc-PDF='pandoc --pdf-engine=xelatex -V CJKmainfont="HYLuoHuaShi" -V ma
 alias ll="ls -l"
 alias la="ls -a"
 alias gisto="gisto --args --proxy-server='socks5://127.0.0.1:1080'"
-alias sqlmap="python /root/Tools/sqlmap-dev/sqlmap.py"
+alias sqlmap="python $HOME/Tools/sqlmap-dev/sqlmap.py"
+alias bufClear="sync | echo 3 > /proc/sys/vm/drop_caches"
 
 
 eval "$(lua /root/Downloads/z.lua/z.lua  --init zsh once enhanced)"
