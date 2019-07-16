@@ -14,6 +14,7 @@ main(){
 	ncmpcpp
 	mpd
 	neofetch
+	urxvt
 }
 
 fileOk(){
@@ -100,5 +101,10 @@ mpd(){
 neofetch(){
 	fileOk "$HOME/.config/neofetch" "neofetch" "neofetch"
 }
+
+# [urxvt]
+urxvt(){
+	fileOk "$HOME/.Xresources" "urxvt/Xresources" ".Xresources"
+
 
 main
