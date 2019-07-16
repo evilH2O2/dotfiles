@@ -15,6 +15,7 @@ main(){
 	mpd
 	neofetch
 	urxvt
+	tmux
 }
 
 fileOk(){
@@ -105,6 +106,11 @@ neofetch(){
 # [urxvt]
 urxvt(){
 	fileOk "$HOME/.Xresources" "urxvt/Xresources" ".Xresources"
+
+# [tmux]
+tmux(){
+	fileOk "$HOME/.tmux.conf" "tmux/tmux.conf" ".tmux.conf"
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 main
