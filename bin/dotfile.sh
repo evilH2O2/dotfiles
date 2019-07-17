@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 cd ..
 # echo `pwd`
@@ -16,6 +16,7 @@ main(){
 	neofetch
 	urxvt
 	tmux
+	terminalizer 
 }
 
 fileOk(){
@@ -62,6 +63,8 @@ bashrc(){
 zsh(){
 	ln -s $HOME/dotfiles/zsh/zshrc $HOME/.zshrc
 	ln -s $HOME/dotfiles/zsh/zprofile $HOME/.zprofile
+	echo -e "\033[33m[!]\033[0 使用　oh-my-zsh，自动下载\n"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	ln -s $HOME/dotfiles/zsh/theme/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
 }
 
@@ -110,7 +113,12 @@ urxvt(){
 # [tmux]
 tmux(){
 	fileOk "$HOME/.tmux.conf" "tmux/tmux.conf" ".tmux.conf"
+	echo -e "\033[32m[*]\033[0m 下载插件管理器: tpm\n"
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# [terminalizer]
+terminalizer(){
+	echo -e "\033[33m[!]\033[0m 自行设置 terminalizer配置 \n"
+}
 
 main
