@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/root/.oh-my-zsh"
+export ZSH="/root/.oh-my-zsh"
 
 autoload -U colors && colors
 # Set name of the theme to load --- if set to "random", it will
@@ -103,7 +103,8 @@ alias la="ls -a"
 alias gisto="gisto --args --proxy-server='socks5://127.0.0.1:1080'"
 alias sqlmap="python $HOME/Tools/sqlmap-dev/sqlmap.py"
 alias bufClear="sync | echo 3 > /proc/sys/vm/drop_caches"
-
+alias terminalizer_Gif="terminalizer render $1 -o $(date +%H-%M-%S-%Y)"
+alias terminalizer_Rec="terminalizer record"
 
 eval "$(lua /root/Downloads/z.lua/z.lua  --init zsh once enhanced)"
 export NNN_CONTEXT_COLORS='2456'

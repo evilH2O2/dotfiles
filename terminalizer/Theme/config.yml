@@ -2,6 +2,7 @@
 # like `/bin/bash -l`, `ls`, or any other commands
 # the default is bash for Linux
 # or powershell.exe for Windows
+# /bin/zsh -l
 command: zsh
 
 # Specify the current working directory path
@@ -49,7 +50,8 @@ frameBox:
   type: null
   title: null
   style:
-    backgroundColor: #282b35 
+    backgroundColor: #282b35
+    # border: 0px solid
     # boxShadow: none
     # margin: 0px
 
@@ -58,7 +60,7 @@ frameBox:
 # the image on your machine or a URL, and you can also
 # add your own CSS styles
 watermark:
-  imagePath: null
+  imagePath: $HOME/dotfiles/terminalizer/Watermark.svg
   style:
     position: absolute
     right: 15px
@@ -76,18 +78,17 @@ cursorStyle: block
 fontFamily: "Monaco, Source Code Pro, YaHei Consolas Hybrid, Monospace"
 
 # The size of the font
-fontSize: 14
+fontSize: 13
 
 # The height of lines
 lineHeight: 1
 
 # The spacing between letters
-letterSpacing: 0
+letterSpacing: 1
 
 # Theme
 theme:
-    # background: "transparent"
-  background: #282b35
+  background: "#282b35"
   foreground: "#afafaf"
   cursor: "#c7c7c7"
   black: "#232628"
