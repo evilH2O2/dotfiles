@@ -85,39 +85,31 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 autoload -U compinit
 compinit
 
-alias chromium="chromium --no-sandbox --proxy-server='socks5://127.0.0.1:1080'" 
 alias terproxy-1081="export ALL_PROXY='socks5://127.0.0.1:1081'"
 alias terproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl ipinfo.io/ip"
 alias audio="alsamixer"
 alias audio-on="amixer sset Master unmute"
-alias v2ray="systemctl restart v2ray"
-alias google-chrome-stable="google-chrome-stable --no-sandbox"
 alias cat="ccat"
-alias vsCode="code --user-data-dir /root"
 alias dockerRUN="systemctl start docker"
 alias pandoc-PDF='pandoc --pdf-engine=xelatex -V CJKmainfont="HYLuoHuaShi" -V mainfont="Source Code Pro" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --highlight-style tango'
 alias ll="ls -l"
 alias la="ls -a"
-alias gisto="gisto --args --proxy-server='socks5://127.0.0.1:1080'"
-alias sqlmap="python $HOME/Tools/sqlmap-dev/sqlmap.py"
 alias bufClear="sync | echo 3 > /proc/sys/vm/drop_caches"
 alias terminalizer_Gif="terminalizer render $1 -o $(date +%H-%M-%S-%Y)"
 alias terminalizer_Rec="terminalizer record"
-
-eval "$(lua /root/Downloads/z.lua/z.lua  --init zsh once enhanced)"
-export NNN_CONTEXT_COLORS='2456'
-
-# grep color
 alias grep='grep --color=auto'
-# diff color
 alias diff='diff --color=auto'
-# ls color
 alias ls='ls --color=auto'
+
+# ---------- git -----------
+
 # 进一步改进ls的彩色输出功能，比如损坏的符号链接显示为红色
 eval $(dircolors -b)
 
+eval "$(lua $HOME/Downloads/z.lua/z.lua  --init zsh once enhanced)"
+export NNN_CONTEXT_COLORS='2456'
 # ===========================================================
 # ===========================================================
 #

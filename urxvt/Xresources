@@ -3,7 +3,7 @@
 !
 ! ----- font ---
 Xft.dpi:96
-URxvt.font: xft:Monaco:size=12, xft:Source Code Variable:size:12, xft:HYLuoHuaShi:size=12, xft:FontAwesome:size=10
+URxvt.font: xft:Monaco:size=12, xft:DejaVu Sans Mono for Powerline:size:12, xft:HYLuoHuaShi:size=12
 ! DejaVuSansMono 配合 Vim 插件 file ico
 !URxvt.font: xft:Fira Code:size=10, xft:WenQuanYi Micro Hei:size=10
 !字体间距
