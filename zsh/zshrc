@@ -103,6 +103,12 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ls='ls --color=auto'
 
+alias transfer_UpFile=transfer
+transfer(){
+	curl -H "Max-Downloads: $2" -H "Max-Days: $3" --upload-file "$1" https://transfer.sh/$(basename "$1") | tee /dev/null;
+	echo
+}
+
 # ---------- git -----------
 
 # 进一步改进ls的彩色输出功能，比如损坏的符号链接显示为红色
