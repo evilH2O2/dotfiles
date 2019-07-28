@@ -71,7 +71,7 @@ zsh(){
 	echo -e "\033[33m[!]\033[0 Zsh命令语法高亮插件 zsh-syntax-highlighting\n"
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 	echo -e "\033[33m[!]\033[0 Z.lua目录跳转\n"
-	git clone https://github.com/skywind3000/z.lua.git $HOME/Downloads
+	git clone https://github.com/skywind3000/z.lua.git $HOME/Downloads/z.lua
 }
 
 # [conky]
