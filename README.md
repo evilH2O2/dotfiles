@@ -10,7 +10,7 @@ curl -L https://git.io/fjrcr | sh
 ## Note
 
 
-注意: `bin/dotfile.sh`中的设置最好自己选择后再建立软连接,或者直接拖到对应的配置文件夹中:
+`bin/dotfile.sh`要有选择的进行设置,或者直接拖到对应的配置文件夹中:
 ``` bash
 main(){
 	vim
@@ -27,6 +27,19 @@ main(){
 ```
 
 **NOTE**: 建立的是配置**目录**的软连接，建议将所需配置程序的配置目录(就上面的几个)删个遍，可以运行　`bin/delConfigFile.sh`
+
+<br>
+
+- Terminal Theme：
+  - rxvt => [urxvt-snazzy](https://github.com/LeonGr/urxvt-snazzy)
+  - gnome-terminal  => [gnome-terminal-snazzy](https://github.com/tobark/hyper-snazzy-gnome-terminal)
+  - hyper => [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy)
+
+- Gedit Theme:
+  - [Dracula Theme](https://draculatheme.com/gedit/)
+  
+- Sublime Code Theme:
+  - [Dracula Theme](https://draculatheme.com/sublime/)
 
 ---
 
