@@ -28,7 +28,7 @@ URxvt.depth:32
 !URxvt.color14:#e91e63
 !URxvt.color15:Gray95
 
-! ----- urxvt-snazzy ---
+! ----- Theme: urxvt-snazzy ---
 
 *background:   [97]#282a36
 *foreground:   #eff0eb
@@ -81,6 +81,7 @@ URxvt.borderLess: False
 URxvt.iso14755:                   false
 URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
 URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+URxvt.clipboard.autocopy:         true
 
 ! 若不设置此选项，则在使用w3m后，neofetch 则不再显示图片,甚至不显示任何东西
 ! From : https://github.com/dylanaraps/neofetch/issues/1174
