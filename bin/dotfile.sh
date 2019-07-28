@@ -66,6 +66,10 @@ zsh(){
 	echo -e "\033[33m[!]\033[0 使用　oh-my-zsh，自动下载\n"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	ln -s $HOME/dotfiles/zsh/theme/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
+	echo -e "\033[33m[!]\033[0 zsh命令自动补全插件 zsh-autosuggestions"
+	git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+	echo -e "\033[33m[!]\033[0 Zsh命令语法高亮插件 zsh-syntax-highlighting"
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 }
 
 # [conky]
