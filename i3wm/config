@@ -224,6 +224,7 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 # ====== Mpc ========
 # period = . | comma = ,
 
+# 终端运行 xprop | grep WM_CLASS 选取 Class名
 
 for_window [class="^Caja$"] floating enable
 for_window [class="^Caja$"] floating_minimum_size 750 x 700
