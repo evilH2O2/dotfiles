@@ -10,7 +10,9 @@ local git_branch='$(git_prompt_info)'
 # 加粗后颜色正确显示
 # PROMPT='%{$fg_bold[red]%}%n%{$fg[green]%}@%{$fg_bold[magenta]%}%M %{$reset_color%}%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info) %{$fg[white]%}->%{$fg[magenta]%}%# %{$reset_color%}'
 
-PROMPT="${prefix}${dir}${git_branch}${suffix}"
+# PROMPT="${prefix}${dir}${git_branch}${suffix}"
+PROMPT="${prefix}${dir}${git_branch} %{$fg[white]%}[%T]%{$reset_color%}
+${suffix}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
