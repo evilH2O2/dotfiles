@@ -117,8 +117,24 @@ eval $(dircolors -b)
 eval "$(lua $HOME/Downloads/z.lua/z.lua  --init zsh once enhanced)"
 export NNN_CONTEXT_COLORS='2456'
 # ===========================================================
-# ===========================================================
-#
+
+# --------- Docker for Pentesters
+# From: https://blog.ropnop.com/docker-for-pentesters/#usefuldockeraliases
+
+alias dockershell="docker run --rm -i -t --entrypoint=/bin/bash"  
+alias dockershellsh="docker run --rm -i -t --entrypoint=/bin/sh"
+
+function dockershellhere() {  
+    dirname=${PWD##*/}
+    docker run --rm -it --entrypoint=/bin/bash -v `pwd`:/${dirname} -w /${dirname} "$@"
+}
+function dockershellshhere() {  
+    dirname=${PWD##*/}
+    docker run --rm -it --entrypoint=/bin/sh -v `pwd`:/${dirname} -w /${dirname} "$@"
+}
+
+# ==========================================================
+
 source $ZSH/oh-my-zsh.sh
 # source ~/.bash_profile
 
