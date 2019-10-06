@@ -88,7 +88,7 @@ compinit
 alias terproxy-1081="export ALL_PROXY='socks5://127.0.0.1:1081'"
 alias terproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
-alias myip="curl ipinfo.io/ip"
+alias myip="curl ifconfig.me"
 alias audio="alsamixer"
 alias audio-on="amixer sset Master unmute"
 alias cat="ccat"
