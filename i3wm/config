@@ -21,8 +21,7 @@ set $mod Mod4
 # font pango:Fira Code 10
 
 font pango:Source Code pro 13
-
-font pango: YaHei Consolas Hybrid 12
+font pango:YaHei Consolas Hybrid 12
 # font pango:HYLuoHuaShi 11
 
 # font pango:Font Awesome 10

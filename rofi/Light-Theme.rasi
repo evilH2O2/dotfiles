@@ -107,3 +107,4 @@ message {
   border-color    : @cyan;
 }
 
+/* vim:ft=css
