@@ -119,8 +119,8 @@ eval $(dircolors -b)
 eval "$(lua $HOME/Downloads/z.lua/z.lua  --init zsh once enhanced)"
 export NNN_CONTEXT_COLORS='2456'
 # ===========================================================
-#export LC_ALL=C.UTF-8
-export LANG=C.UTF-8
+export LANG=zh_CN.UTF-8
+#export LC_ALL=zh_CN.UTF-8
 
 # ===========================================================
 # --------- Docker for Pentesters
