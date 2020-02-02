@@ -104,6 +104,8 @@ alias terminalizer_Rec="terminalizer record"
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ls='ls --color=auto'
+alias cls='clear'
+alias gisto='$HOME/Downloads/soft/Gisto-1.12.13-x86_64.AppImage --args --proxy-server="socks5://127.0.0.1:1080" > /dev/null &'
 
 alias transfer_UpFile=transfer
 transfer(){
@@ -112,6 +114,9 @@ transfer(){
 }
 
 # ---------- git -----------
+alias git-log-branch="git log --oneline --decorate --graph --all"
+
+
 
 # 进一步改进ls的彩色输出功能，比如损坏的符号链接显示为红色
 eval $(dircolors -b)
@@ -120,7 +125,10 @@ eval "$(lua $HOME/Downloads/z.lua/z.lua  --init zsh once enhanced)"
 export NNN_CONTEXT_COLORS='2456'
 # ===========================================================
 export LANG=zh_CN.UTF-8
-#export LC_ALL=zh_CN.UTF-8
+# export LC_ALL=zh_CN.UTF-8
+
+export EDITOR=vim
+
 
 # ===========================================================
 # --------- Docker for Pentesters
