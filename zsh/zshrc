@@ -129,6 +129,10 @@ export LANG=zh_CN.UTF-8
 
 export EDITOR=vim
 
+if [[ -d "$HOME/.win_asm"  ]]; then
+	export WINEPREFIX=~/.win_asm
+fi
+
 
 # ===========================================================
 # --------- Docker for Pentesters
