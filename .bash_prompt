@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+	export TERM='gnome-256color';
+elif infocmp xterm-256color >/dev/null 2>&1; then
+	export TERM='xterm-256color';
+fi;
+
+
+# Color's name from:
+# http://jonasjacek.github.io/colors/
+
+if tput setaf 1 &> /dev/null; then
+    tput sgr0
+    bold=$(tput bold)
+    reset=$(tput sgr0)
+    black=$(tput setaf 0)
+    red=$(tput setaf 9)
+    indianred=$(tput setaf 203)
+    green=$(tput setaf 41)  # SpringGreen3
+    green49=$(tput setaf 49)    # MediumSpringGreen
+    yellow=$(tput setaf 226)    # Yellow1
+    blue=$(tput setaf 33)   # DodgerBlue1
+    purple=$(tput setaf 5)
+    cyan=$(tput setaf 43)   # Cyan3
+    white=$(tput setaf 15)
+
+else
+    # 8/16 color
+    # color name:
+    # https://misc.flogisoft.com/bash/tip_colors_and_formatting
+    bold="\e[1m"
+    reset="\e[0m"
+    black="\e[30m"
+    red="\e[31m"
+    indianred="\e[91m"   # Light red
+    green="\e[32m"
+    green49="\e[106m"   # Light cyan
+    yellow="\e[33m"
+    blue="\e[34m"
+    purple="\e[35m"
+    cyan="\e[36m"
+    white="\e[97m"
+fi
+
+
+# USER color
+if [[ "$USER" == "root" ]]; then
+    userColor=${indianred}
+else
+    userColor=${red}
+fi
+
+
+function exitstatus() {
+    if [[ $? != 0 ]]; then
+        echo "${red}×"
+    fi
+}
+
+
+# Set PS1
+# PS1 prompt variable help:
+# https://ss64.com/bash/syntax-prompt.html
+PS1="\[${bold}\]\n"
+PS1+="\[${userColor}\]\u"
+PS1+="\[${white}\] at "
+PS1+="\[${green49}\]\h "
+PS1+="\[${white}\] in "
+PS1+="\[${purple}\]\w"
+PS1+="\$(prompt_git \"\[${white}\] on \[${green}\]\" \"\[${blue}\]\")"
+PS1+="\[${white}\] \t"
+PS1+="\n"
+PS1+="\[${cyan}\]\$ \[${reset}\]"
+export PS1
+
+PS2="\[${yellow}\]→ \[${reset}\]"
+export PS2
+
+

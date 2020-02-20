@@ -1,0 +1,60 @@
+#!/bin/bash
+
+
+alias ..="cd .."
+alias d="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias pu="cd ~/Public"
+alias pi="cd ~/Pictures"
+
+
+# 网络/代理
+alias shellproxy="export ALL_PROXY='socks5://127.0.0.1:$1'"
+alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
+alias unsetproxy="unset ALL_PROXY"
+alias myip="curl cip.cc"
+alias ipad="ip addr | grep -B 2 'inet'"
+alias pc4="proxychains4 $1"
+
+
+# 音频
+alias audio="alsamixer"
+alias audio-on="amixer sset Master unmute"
+
+
+# 实用
+alias rm="rm -i"
+alias mk="mkdir -p"
+alias cls='clear'
+alias ls='ls --color=auto'
+alias ll="ls -l"
+alias la="ls -al"
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias bufClear="sync | echo 3 > /proc/sys/vm/drop_caches"
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+alias git-log-branch="git log --oneline --decorate --graph --all"
+
+
+# docker
+alias dockerRUN="systemctl start docker"
+alias docker_SA="docker start $1 && docker attach $1"
+
+
+# 软件轻松用
+alias pandoc-PDF='pandoc --pdf-engine=xelatex -V CJKmainfont="HYLuoHuaShi" -V mainfont="Source Code Pro" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --highlight-style tango'
+alias terminalizer_Gif="terminalizer render $1 -o $(date +%H-%M-%S-%Y)"
+alias terminalizer_Rec="terminalizer record"
+# alias gisto='$HOME/Downloads/soft/Gisto-1.12.13-x86_64.AppImage --args --proxy-server="socks5://127.0.0.1:1080" > /dev/null &'
+
+
+# Pentest
+# From: https://blog.ropnop.com/docker-for-pentesters/#usefuldockeraliases
+alias dockershell="docker run --rm -i -t --entrypoint=/bin/bash"
+alias dockershellsh="docker run --rm -i -t --entrypoint=/bin/sh"
+
+
+alias ss="searchsploit"
+

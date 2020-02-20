@@ -1,4 +1,7 @@
-.git/
+EXCLUDE
 README.md
-.gitignore
-Preview/
+master.sh
+kali.sh
+bootrun.sh
+.git/
+
