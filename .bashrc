@@ -1,1 +1,1 @@
-[ -n "$PS1" ] && source ~/.kalirc;
+[ -n "$PS1" ] && source ~/.bash_profile;
