@@ -67,7 +67,7 @@ function exitstatus() {
 PS1="\[${bold}\]\n"
 PS1+="\[${userColor}\]\u"
 PS1+="\[${white}\] at "
-PS1+="\[${green49}\]\h "
+PS1+="\[${green49}\]\h"
 PS1+="\[${white}\] in "
 PS1+="\[${purple}\]\w"
 PS1+="\$(prompt_git \"\[${white}\] on \[${green}\]\" \"\[${blue}\]\")"

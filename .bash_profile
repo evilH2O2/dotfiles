@@ -38,13 +38,7 @@ if which brew &> /dev/null && [ -r "$(brew --prefix)"/usr/local/etc/profile.d/ba
 	# Ensure existing Homebrew v1 completions continue to work
 	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/usr/local/etc/bash_completion.d";
 	source "$(brew --prefix)/usr/local/etc/profile.d/bash_completion.sh";
-
-
-if [ -f /usr/local/etc/bash_completion ] && ! shopt -oq posix; then
+elif [ -f /usr/local/etc/bash_completion ]; then
     source /usr/local/etc/bash_completion
 fi
 
-# Bash autocomplete like zsh
-# https://superuser.com/questions/288714/bash-autocomplete-like-zsh
-#bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
