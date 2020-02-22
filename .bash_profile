@@ -25,16 +25,6 @@ unset file
 # 不需要 cd 直接输入目录名(invalid)
 # shopt -s autocd;
 
-# cd 的时候，检查文件名拼写是否有误，
-# 大小写、标点等等，若有则改之后在执行命令
-shopt -s cdspell;
-
-# 通过访问 Hash 表内已记住的命令的目录直接定位命令，
-# 不需要花费时间来 搜索路径目录 定位命令
-# 如果不存在，那还是会直接去搜索路径目录
-# 通过 hash 输出 hash table
-# Form : https://www.computerhope.com/unix/bash/hash.htm
-shopt -s checkhash;
 
 # 添加到 bash history文件，而不是覆盖它
 shopt -s histappend;

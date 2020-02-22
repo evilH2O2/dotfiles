@@ -26,3 +26,7 @@ export HISTCONTROL='ignoreboth';
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
+
+# 退出 Homebrew 的分析
+# https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
+export HOMEBREW_NO_ANALYTICS=1
