@@ -22,8 +22,8 @@ unset file
 # All Options : 
 # https://www.computerhope.com/unix/bash/shopt.htm
 
-# 不需要 cd 直接输入目录名
-shopt -s autocd;
+# 不需要 cd 直接输入目录名(invalid)
+# shopt -s autocd;
 
 # cd 的时候，检查文件名拼写是否有误，
 # 大小写、标点等等，若有则改之后在执行命令
