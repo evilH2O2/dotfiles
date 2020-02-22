@@ -1,11 +1,13 @@
 #!/bin/bash
-
+# FROM:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 
 alias ..="cd .."
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pi="cd ~/Pictures"
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -15,6 +17,7 @@ else # macOS `ls`
 	colorflag="-G"
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
+
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
@@ -28,13 +31,16 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
+alias ll="ls -l ${colorflag}"
+
 
 # 网络/代理
 alias shellproxy="export ALL_PROXY='socks5://127.0.0.1:$1'"
 alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl cip.cc"
-
+alias ping_baidu="ping -c4 www.baidu.com"
+alias ping_google="ping -c4 www.google.com"
 
 # 实用
 alias rm="rm -i"
@@ -48,7 +54,7 @@ alias git-log-branch="git log --oneline --decorate --graph --all"
 
 
 # docker
-alias docker_SA="docker start $1 && docker attach $1"
+alias docker_start_attach="docker start $1 && docker attach $1"
 
 
 # Pentest
