@@ -38,7 +38,7 @@ alias ll="ls -l ${colorflag}"
 alias shellproxy="export ALL_PROXY='socks5://127.0.0.1:$1'"
 alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
-# alias myip="curl cip.cc"
+alias myip="curl cip.cc"
 alias ping_baidu="ping -c4 www.baidu.com"
 alias ping_google="ping -c4 www.google.com"
 
@@ -46,7 +46,6 @@ alias ping_google="ping -c4 www.google.com"
 alias rm="rm -i"
 alias mk="mkdir -p"
 alias cls='clear'
-alias curl="curl -i"
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 # Print each PATH entry on a separate line
