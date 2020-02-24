@@ -17,11 +17,30 @@ set wildmenu " 状态栏显示候选补全命令
 set shortmess=atI " 启动的时候不显示那个援助乌干达儿童的提示
 set backspace=2 " 解决插入模式下delete/backspce键失效问题
 " set guifont=console:h11  " Font
-set guifont=Source\ Code\ pro\ h11  " Font
+"set guifont=Source\ Code\ pro\ h11  " Font
 " set guifont=Sauce\ Code\ Pro\ h11
 set showmatch  " 自动匹配括号
 " set novb " 错误不响铃,闪烁  t_vb 为闪烁
 set vb t_vb= " 错误不响铃不闪烁
+
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
+
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
 " 将./ 两键绑定为 nohlsearch
 nmap <silent> ./ :nohlsearch<CR>
 
