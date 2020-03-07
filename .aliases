@@ -52,6 +52,7 @@ alias grep='grep --color=auto'
 alias path='echo -e ${PATH//:/\\n}'
 alias git-log-branch="git log --oneline --decorate --graph --all"
 alias sha256sum="openssl dgst -sha256 $1"
+alias rename="mv $1 $2"
 
 # docker
 alias docker_start_attach="docker start $1 && docker attach $1"
