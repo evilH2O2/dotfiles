@@ -1,13 +1,14 @@
 syntax on
 set nu
 set tabstop=4 "用于设置Tab键宽度,默认为 8 
-set shiftwidth=4
+set shiftwidth=4 " 表示每一级缩进的长度
+set autoindent  "自动缩进
+set smartindent " 加强版缩进
+set expandtab       " 设置缩进用空格来表示
 colorscheme basepurple
 set cul "浅色高亮当前行
 set history=1000
 set autoread	 " 当文件在外部被修改，自动更新该文件
-set autoindent  "自动缩进
-set smartindent " 加强版缩进
 set hlsearch " 搜索时高亮显示被找到的文本
 set incsearch " 输入关键字的时候实时高亮显示
 set showcmd " 在状态行中显示（部分）命令
