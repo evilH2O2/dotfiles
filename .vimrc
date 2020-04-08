@@ -32,7 +32,7 @@ set noeol
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+	set undodir=~/.vim/undodir
 endif
 
 " Don’t create backups when editing files in certain directories
