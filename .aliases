@@ -47,7 +47,8 @@ alias rm="rm -i"
 alias mk="mkdir -p"
 alias cls='clear'
 alias grep='grep --color=auto'
-#alias diff='diff --color=auto'
+# avoid escape sequence attacks
+alias cat="cat -v"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 alias git-log-branch="git log --oneline --decorate --graph --all"
