@@ -22,15 +22,23 @@ function nmap_server_info() {
   cat "$tmp/$1-$time.namp"
 }
 
+nmap_all_port() {
+	time=$(date +%F-%H-%M-%S)
+	nmap -p- -A $1 >> "$tmp/$1-all-port-$time.namp"
+	cat "$tmp/$1-all-port-$time.namp"
+}
 
 # php re shell
 function php_reverse_shell() {
   cp /usr/share/webshell/php-reverse-shell.php ~/Desktop
 }
 
+function rec_terminal() {
+	script -f -a $1 -t 2> $2
+}
 
 # Internat Test
-function how_nat() {
+function how_ip() {
   ping -c 3 www.baidu.com
 }
 
