@@ -1,0 +1,41 @@
+# Ref:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.inputrc
+
+# Bash中自动补全时忽略大小写
+set completion-ignore-case on
+
+# 列出所有匹配项，以防可能进行多个完成
+set show-all-if-ambiguous on
+
+# 能够让你在命令行输入字符之后，
+# 就可以用方向键Up，Down来搜索以该串字符开头的历史命令
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# 自动完成目录的符号链接时，立即添加斜杠
+set mark-symlinked-directories on
+
+# 除非模式明确以点开头，否则不要自动完成隐藏文件
+set match-hidden-files off
+
+# 一次显示所有自动完成结果
+set page-completions off
+
+# 如果一个单词有200多个可能的完成形式，要求全部显示出来
+set completion-query-items 200
+
+# 完成时显示额外的文件信息，就像' ls -F '一样
+set visible-stats on
+
+# Be more intelligent when autocompleting by also looking at the text after
+# the cursor. For example, when the current line is "cd ~/src/mozil", and
+# the cursor is on the "z", pressing Tab will not autocomplete it to "cd
+# ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
+# Readline used by Bash 4.)
+set skip-completed-text on
+
+# 允许输入和输出UTF-8，而不是显示 $'\0123\0456' 之类的内容
+set input-meta on
+set output-meta on
+set convert-meta off
+

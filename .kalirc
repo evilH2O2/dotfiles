@@ -28,6 +28,17 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     source /etc/bash_completion
 fi
 
+# https://github.com/liuchengxu/dotfiles/blob/master/bashrc#L1-L6
+# If not running interactively, don't do anything
+# avoid bind: warning: line editing not enabled
+case $- in
+*i*) ;;
+  *) return;;
+esac
+
+### Perform file completion in a case insensitive fashion
+bind "set completion-ignore-case on"
+
 # Bash autocomplete like zsh
 # https://superuser.com/questions/288714/bash-autocomplete-like-zsh
 #bind 'set show-all-if-ambiguous on'
