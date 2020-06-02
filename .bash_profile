@@ -39,13 +39,23 @@ for option in autocd globstar; do
 done
 
 
+### 以不区分大小写的方式补全文件
+bind "set completion-ignore-case on"
+
+# Bash autocomplete like zsh
+# https://superuser.com/questions/288714/bash-autocomplete-like-zsh
+#bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+
 # Form : https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile
 # Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -r "$(brew --prefix)"/usr/local/etc/profile.d/bash_completion.sh"" ]; then
-	# Ensure existing Homebrew v1 completions continue to work
-	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/usr/local/etc/bash_completion.d";
-	source "$(brew --prefix)/usr/local/etc/profile.d/bash_completion.sh";
-elif [ -f /usr/local/etc/bash_completion ]; then
-    source /usr/local/etc/bash_completion
-fi
 
+#if which brew &> /dev/null && [ -r "$(brew --prefix)"/usr/local/etc/profile.d/bash_completion.sh"" ]; then
+#	# Ensure existing Homebrew v1 completions continue to work
+#	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/usr/local/etc/bash_completion.d";
+#	source "$(brew --prefix)/usr/local/etc/profile.d/bash_completion.sh";
+#elif [ -f /usr/local/etc/bash_completion ]; then
+#    source /usr/local/etc/bash_completion
+#fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

@@ -39,8 +39,6 @@ alias shellproxy="export ALL_PROXY='socks5://127.0.0.1:$1'"
 alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl cip.cc"
-alias ping_baidu="ping -c4 www.baidu.com"
-alias ping_google="ping -c4 www.google.com"
 
 # 实用
 alias rm="rm -i"
