@@ -1,5 +1,14 @@
 # dotfiles
 
+<br/>
+
+```bash
+git clone -b Mac https://github.com/evilH2O2/dotfiles.git
+# or
+git checkout Mac
+```
+
+<br/>
 
 ``` bash
 curl -L https://git.io/fjrcr | sh
