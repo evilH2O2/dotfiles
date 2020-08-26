@@ -2,10 +2,10 @@
 
 
 # run with root
-if [ "$USER" != "root" ]; then
-	echo "You are not ${red}roooooot"
-  sudo su
-fi
+#if [ "$USER" != "root" ]; then
+#	echo "You are not ${red}roooooot"
+#  sudo su
+#fi
 
 
 # Add ~/bin to the $PATH
