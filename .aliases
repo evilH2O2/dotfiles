@@ -3,10 +3,10 @@
 # https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 
 alias ..="cd .."
-alias d="cd ~/Documents"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias pi="cd ~/Pictures"
+alias cdc="cd ~/Documents"
+alias cdl="cd ~/Downloads"
+alias cdt="cd ~/Desktop"
+alias cpi="cd ~/Pictures"
 
 
 # Detect which `ls` flavor is in use
@@ -34,14 +34,14 @@ alias ls="command ls ${colorflag}"
 alias ll="ls -l ${colorflag}"
 
 
-# 网络/代理
+# network/proxy
 alias shellproxy="export ALL_PROXY='socks5://127.0.0.1:$1'"
 alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl cip.cc"
 
 # 实用
-alias rm="rm -i"
+alias rm="sleep 2;rm -i"
 alias mk="mkdir -p"
 alias cls='clear'
 alias grep='grep --color=auto'
