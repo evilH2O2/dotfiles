@@ -22,8 +22,8 @@ unset file
 # All Options : 
 # https://www.computerhope.com/unix/bash/shopt.htm
 
-# 不需要 cd 直接输入目录名(invalid)
-# shopt -s autocd;
+# 不需要 cd 直接输入目录名(~invalid~)
+shopt -s autocd;
 
 
 # 添加到 bash history文件，而不是覆盖它

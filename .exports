@@ -48,3 +48,6 @@ export GPG_TTY=$(tty);
 # 消除登陆非 zsh shell 时显示的警告
 # https://support.apple.com/zh-cn/HT208050`
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Homebrew's sbin(brew)
+export PATH="/usr/local/sbin:$PATH"
