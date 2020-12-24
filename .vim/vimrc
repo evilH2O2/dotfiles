@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab          " Tab to space
 colorscheme basepurple " Theme
 set cul                " 浅色高亮当前行
+set ruler              " show line column
 set history=1000
 set autoread           " 当文件在外部被修改，自动更新该文件
 set autoindent         " 自动缩进
