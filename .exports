@@ -51,3 +51,22 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Homebrew's sbin(brew)
 export PATH="/usr/local/sbin:$PATH"
+
+# GOPATH
+export GOPATH=/usr/local/share/go
+export PATH=$PATH:$GOPATH/bin
+
+# GOPROXY
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn,direct
+
+# other (temporary)
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+
+# clangd (temporary)
+export PATH=$PATH:/usr/local/opt/llvm/bin
+
+# Python bin (temporary)
+export PATH=$PATH:/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9/bin
