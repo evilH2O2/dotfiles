@@ -5,3 +5,5 @@ kali.sh
 bootrun.sh
 .git/
 .gitignore
+.DS_Store
+.idea/
