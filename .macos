@@ -1,0 +1,9 @@
+############################
+# dock                    #
+###########################
+
+# 启动台图标
+defaults write com.apple.dock springboard-columns -int 9
+defaults write com.apple.dock springboard-rows -int 8
+defaults write com.apple.dock ResetLaunchPad -bool TRUE
+# killall Dock 重启 dock
