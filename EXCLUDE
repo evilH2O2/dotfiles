@@ -7,3 +7,4 @@ bootrun.sh
 .gitignore
 .DS_Store
 .idea/
+.macos
