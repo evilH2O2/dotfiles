@@ -42,7 +42,9 @@ alias myip="curl ip.cip.cc; echo"
 
 
 # 实用
-alias rm="sleep 1;rm -i"
+# alias rm="sleep 1;rm -i"
+alias rm="echo '❗️Please use del !!!!!!!!!'"
+alias del="trash"
 alias mk="mkdir -pv"
 alias cls='clear'
 alias grep='grep --color=auto'
