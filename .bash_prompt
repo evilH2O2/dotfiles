@@ -73,7 +73,7 @@ PS1+="\[${purple}\]\W"
 PS1+="\$(prompt_git \"\[${white}\] on \[${green}\]\" \"\[${blue}\]\")"
 PS1+="\[${white}\] \t"
 PS1+="\n"
-PS1+="\[${cyan}\]\$ \[${reset}\]"
+PS1+="\[${cyan}\]\\$ \[${reset}\]"
 export PS1
 
 PS2="\[${yellow}\]→ \[${reset}\]"
