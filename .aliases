@@ -38,9 +38,8 @@ alias ll="ls -l ${colorflag}"
 alias shell_proxy="export ALL_PROXY=$1"
 alias shellproxy-1080="export ALL_PROXY='socks5://127.0.0.1:1080'"
 alias unsetproxy="unset ALL_PROXY && unset http_proxy && unset https_proxy"
-alias myip="curl ip.cip.cc; echo"
-
-
+alias my_public_ip="curl ip.cip.cc; echo"
+alias my_local_ip="echo $(ifconfig en0 | grep inet | awk 'NR==2 {print $2}')"
 # 实用
 # alias rm="sleep 1;rm -i"
 alias rm="echo '❗️Please use del !!!!!!!!!'"
@@ -48,6 +47,7 @@ alias del="trash"
 alias mk="mkdir -pv"
 alias cls='clear'
 alias grep='grep --color=auto'
+alias openPorts='lsof -i -P | grep -i "listen"'
 # avoid escape sequence attacks
 # alias cat="cat -v"
 # Print each PATH entry on a separate line
